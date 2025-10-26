@@ -1,0 +1,11 @@
+.heading {
+  font-size: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+  padding: 2.6rem;
+  padding-bottom: 0%;
+  padding-top: 0%;
+  color: var(--primary);
+}
