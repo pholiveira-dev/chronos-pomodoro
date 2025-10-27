@@ -1,0 +1,38 @@
+.container {
+  align-content: center;
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+}
+
+.msgForm {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #ccc;
+  font-size: 3rem;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.boxForm {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: none;
+  border-color: transparent;
+  color: white;
+  width: 30%;
+  border-bottom-color: var(--primary-light);
+}
+
+.boxForm:focus {
+  outline: none;
+  background: none;
+  transition: border 0.3 ease-in-out;
+  border-radius: 0.8rem;
+  border-color: var(--primary-light);
+}

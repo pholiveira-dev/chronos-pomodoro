@@ -1,0 +1,26 @@
+.icon {
+  color: var(--text-over-primary);
+  background-color: var(--primary);
+  border-radius: 1rem;
+  padding: 0.3rem;
+}
+
+.icon:hover {
+  transition: (1);
+  background-color: var(--primary-dark);
+}
+
+.icon > svg {
+  height: 3.6rem;
+  width: 4.2rem;
+  padding: 0.5rem;
+}
+
+.iconContainer {
+  padding-top: 2.5rem;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
