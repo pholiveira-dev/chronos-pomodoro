@@ -2,7 +2,7 @@ import styles from "./styles.module.css";
 
 export function Tasks() {
   return (
-    <div className={styles.container}>
+    <nav className={styles.container}>
       <form className={styles.containerForm} action="" method="post">
         task:
       </form>
@@ -15,6 +15,6 @@ export function Tasks() {
       <p>
         Nesse ciclo <strong>foque</strong> por <strong>25 min.</strong>
       </p>
-    </div>
+    </nav>
   );
 }

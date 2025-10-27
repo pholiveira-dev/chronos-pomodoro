@@ -6,6 +6,7 @@ import { Icons } from "./components/Icons";
 
 import "./styles/theme.css";
 import "./styles/global.css";
+import { ButtonPlay } from "./components/ButtonPlay";
 
 export function App() {
   return (
@@ -25,6 +26,7 @@ export function App() {
 
       <Container>
         <Tasks />
+        <ButtonPlay />
       </Container>
 
       <Container>
