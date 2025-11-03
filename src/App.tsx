@@ -6,6 +6,7 @@ import { ButtonPlay } from "./components/ButtonPlay";
 import { CountDown } from "./components/CountDown";
 import { Footer } from "./components/Footer";
 import { DefaultInput } from "./components/DefaultInput";
+import { Cycles } from "./components/Cycles";
 
 import "./styles/theme.css";
 import "./styles/global.css";
@@ -37,7 +38,7 @@ export function App() {
               labelText="tesk"
               id="meuInput"
               type="text"
-              placeholder="Digite algo"
+              placeholder="Ex.: estudar para a prova"
             />
           </div>
 
@@ -46,7 +47,7 @@ export function App() {
           </div>
 
           <div className="formRow"></div>
-
+          <Cycles />
           <div className="formRow">
             <ButtonPlay />
           </div>
