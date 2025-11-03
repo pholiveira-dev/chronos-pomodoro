@@ -3,8 +3,10 @@ import styles from "./styles.module.css";
 
 export function ButtonPlay() {
   return (
-    <button className={styles.buttonForm}>
-      <CirclePlay />
-    </button>
+    <form action="">
+      <button className={styles.buttonForm}>
+        <CirclePlay />
+      </button>
+    </form>
   );
 }

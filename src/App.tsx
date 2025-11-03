@@ -1,12 +1,14 @@
 import { HomeIcon, Settings, Sun, TimerIcon } from "lucide-react";
 import { Container } from "./components/Container";
-import { Tasks } from "./components/Tasks";
 import { Logo } from "./components/Logo";
 import { Icons } from "./components/Icons";
+import { ButtonPlay } from "./components/ButtonPlay";
+import { CountDown } from "./components/CountDown";
+import { Footer } from "./components/Footer";
+import { DefaultInput } from "./components/DefaultInput";
 
 import "./styles/theme.css";
 import "./styles/global.css";
-import { ButtonPlay } from "./components/ButtonPlay";
 
 export function App() {
   return (
@@ -25,12 +27,34 @@ export function App() {
       </Container>
 
       <Container>
-        <Tasks />
-        <ButtonPlay />
+        <CountDown />
       </Container>
 
       <Container>
-        <section>FOOTER</section>
+        <form className="form" action="">
+          <div className="formRow">
+            <DefaultInput
+              labelText="tesk"
+              id="meuInput"
+              type="text"
+              placeholder="Digite algo"
+            />
+          </div>
+
+          <div className="formRow">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+
+          <div className="formRow"></div>
+
+          <div className="formRow">
+            <ButtonPlay />
+          </div>
+        </form>
+      </Container>
+
+      <Container>
+        <Footer />
       </Container>
     </>
   );
