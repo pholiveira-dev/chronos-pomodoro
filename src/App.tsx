@@ -1,8 +1,15 @@
-import { HomeIcon, Settings, Sun, TimerIcon } from "lucide-react";
+import {
+  HomeIcon,
+  PlayCircleIcon,
+  Settings,
+  StopCircleIcon,
+  Sun,
+  TimerIcon,
+} from "lucide-react";
 import { Container } from "./components/Container";
 import { Logo } from "./components/Logo";
 import { Icons } from "./components/Icons";
-import { ButtonPlay } from "./components/ButtonPlay";
+import { DefaultButton } from "./components/DefaultButton";
 import { CountDown } from "./components/CountDown";
 import { Footer } from "./components/Footer";
 import { DefaultInput } from "./components/DefaultInput";
@@ -49,7 +56,8 @@ export function App() {
           <div className="formRow"></div>
           <Cycles />
           <div className="formRow">
-            <ButtonPlay />
+            <DefaultButton icon={<PlayCircleIcon />} color="green" />
+            <DefaultButton icon={<StopCircleIcon />} color="red" />
           </div>
         </form>
       </Container>
