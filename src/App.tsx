@@ -1,13 +1,7 @@
-import {
-  HomeIcon,
-  PlayCircleIcon,
-  Settings,
-  Sun,
-  TimerIcon,
-} from "lucide-react";
+import { PlayCircleIcon } from "lucide-react";
 import { Container } from "./components/Container";
 import { Logo } from "./components/Logo";
-import { Icons } from "./components/Icons";
+import { Menu } from "./components/Menu";
 import { DefaultButton } from "./components/DefaultButton";
 import { CountDown } from "./components/CountDown";
 import { Footer } from "./components/Footer";
@@ -25,12 +19,7 @@ export function App() {
       </Container>
 
       <Container>
-        <Icons>
-          <HomeIcon />
-          <TimerIcon />
-          <Settings />
-          <Sun />
-        </Icons>
+        <Menu />
       </Container>
 
       <Container>
