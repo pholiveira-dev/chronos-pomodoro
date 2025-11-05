@@ -3,8 +3,12 @@ import styles from "./styles.module.css";
 export function Footer() {
   return (
     <footer className={styles.container}>
-      <p className={styles.paragraph}>Entenda a técnica pomodoro 🍅</p>
-      <p className={styles.paragraph}>Chronos Pomodoro © 2025 - Feito com 💚</p>
+      <a href="" className={styles.paragraph}>
+        Entenda a técnica pomodoro 🍅
+      </a>
+      <a href="" className={styles.paragraph}>
+        Chronos Pomodoro &copy; {new Date().getFullYear()} - Feito com 💚
+      </a>
     </footer>
   );
 }

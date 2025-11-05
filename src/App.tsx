@@ -2,7 +2,6 @@ import {
   HomeIcon,
   PlayCircleIcon,
   Settings,
-  StopCircleIcon,
   Sun,
   TimerIcon,
 } from "lucide-react";
@@ -57,7 +56,6 @@ export function App() {
           <Cycles />
           <div className="formRow">
             <DefaultButton icon={<PlayCircleIcon />} color="green" />
-            <DefaultButton icon={<StopCircleIcon />} color="red" />
           </div>
         </form>
       </Container>
