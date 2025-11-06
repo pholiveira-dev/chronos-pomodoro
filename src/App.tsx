@@ -1,57 +1,8 @@
-import { PlayCircleIcon } from "lucide-react";
-import { Container } from "./components/Container";
-import { Logo } from "./components/Logo";
-import { Menu } from "./components/Menu";
-import { DefaultButton } from "./components/DefaultButton";
-import { CountDown } from "./components/CountDown";
-import { Footer } from "./components/Footer";
-import { DefaultInput } from "./components/DefaultInput";
-import { Cycles } from "./components/Cycles";
+import { Home } from "./pages/Home";
 
 import "./styles/theme.css";
 import "./styles/global.css";
 
 export function App() {
-  return (
-    <>
-      <Container>
-        <Logo />
-      </Container>
-
-      <Container>
-        <Menu />
-      </Container>
-
-      <Container>
-        <CountDown />
-      </Container>
-
-      <Container>
-        <form className="form" action="">
-          <div className="formRow">
-            <DefaultInput
-              labelText="tesk"
-              id="meuInput"
-              type="text"
-              placeholder="Ex.: estudar para a prova"
-            />
-          </div>
-
-          <div className="formRow">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-
-          <div className="formRow"></div>
-          <Cycles />
-          <div className="formRow">
-            <DefaultButton icon={<PlayCircleIcon />} color="green" />
-          </div>
-        </form>
-      </Container>
-
-      <Container>
-        <Footer />
-      </Container>
-    </>
-  );
+  return <Home />;
 }
