@@ -2,39 +2,30 @@ import { DefaultInput } from "../DefaultInput";
 import { DefaultButton } from "../DefaultButton";
 import { Cycles } from "../Cycles";
 import { PlayCircleIcon } from "lucide-react";
-import { type HomeProps } from "../../pages/Home";
+import { useState } from "react";
 
-export function MainForm({ state, setState }: HomeProps) {
-  function handleClick() {
-    setState((prevState) => {
-      return {
-        ...prevState,
-        config: {
-          ...prevState.config,
-          workTime: 34,
-        },
-        formattedSecondsRemaining: "23:34",
-      };
-    });
+export function MainForm() {
+  const [taskName, setTaskName] = useState("");
+
+  function handleCreateNewTask(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
   }
+
   return (
-    <form className="form" action="">
-      <div>
-        <button type="button" onClick={handleClick}>
-          Clicar
-        </button>
-      </div>
+    <form onSubmit={handleCreateNewTask} className="form" action="">
       <div className="formRow">
         <DefaultInput
           labelText="task"
           id="meuInput"
           type="text"
           placeholder="Ex.: estudar para a prova"
+          value={taskName}
+          onChange={(e) => setTaskName(e.target.value)}
         />
       </div>
 
       <div className="formRow">
-        <p>O próximo intervalo é de {state.config.workTime} min</p>
+        <p>O próximo intervalo é de 25 min</p>
       </div>
 
       <div className="formRow"></div>
