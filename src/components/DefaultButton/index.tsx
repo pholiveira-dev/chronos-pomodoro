@@ -12,8 +12,7 @@ type AvailableColors = "green" | "red";
 export function DefaultButton({ ...props }: DefaultButtonProps) {
   const [buttonColor, setButtonColor] = useState<AvailableColors>("green");
 
-  function handleButtonColor(event: React.MouseEvent) {
-    event.preventDefault();
+  function handleButtonColor() {
     setButtonColor((prevColor) => {
       const nextColor = prevColor === "green" ? "red" : "green";
       return nextColor;
