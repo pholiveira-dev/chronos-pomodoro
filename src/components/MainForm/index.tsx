@@ -7,6 +7,7 @@ import type { TaskModel } from "../../models/TaskModel";
 import { useTaskContext } from "../../contexts/TaskContext/useTaskContext";
 import { getNextCycle } from "../../utils/getNextCycle";
 import { getNextCycleType } from "../../utils/getNextCycleType";
+import { formattedSecondsToMinutes } from "../../utils/formattedSecondsToMinutes";
 
 export function MainForm() {
   const { state, setState } = useTaskContext();
@@ -33,7 +34,7 @@ export function MainForm() {
       startDate: Date.now(),
       completeDate: null,
       interruptDate: null,
-      duration: 1,
+      duration: state.config[nextCycleType],
       type: nextCycleType,
     };
 
@@ -46,7 +47,7 @@ export function MainForm() {
         activeTask: newTask,
         currentCycle: nextCycle,
         secondsRemaining,
-        formattedSecondsRemaining: "00:00", //Conferir
+        formattedSecondsRemaining: formattedSecondsToMinutes(secondsRemaining), //Conferir
         tasks: [...prevState.tasks, newTask],
       };
     });
@@ -68,8 +69,12 @@ export function MainForm() {
         <p>O próximo intervalo é de 25 min</p>
       </div>
 
-      <div className="formRow"></div>
-      <Cycles />
+      {state.currentCycle > 0 && (
+        <div className="formRow">
+          <Cycles />
+        </div>
+      )}
+
       <div className="formRow">
         <DefaultButton icon={<PlayCircleIcon />} color="green" />
       </div>
